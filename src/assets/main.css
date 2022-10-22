@@ -1,0 +1,18 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --offwhite: #e4e0d4;
+  --fluorgreen: #5ced7e;
+  --graphite: #63625c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--offwhite)
+}
+
+#app{
+  padding: 10px;
+}
