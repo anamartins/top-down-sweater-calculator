@@ -27,21 +27,21 @@
     
     <section class="results" v-if="shouldShowResults">
       <h2>Results</h2>
-        <p>Cast on <span className="number">{{results.neckline}}</span> stitches and make a circle. Make your collar using stitch and knit as many rows
-        as you want. Your yoke will have <span className="number">{{results.armholeRows}}</span> rows. It means you need to make
+        <p>Cast on <span class="number-result">{{results.neckline}}</span> stitches and make a circle. Make your collar using stitch and knit as many rows
+        as you want. Your yoke will have <span class="number-result">{{results.armholeRows}}</span> rows. It means you need to make
         {{results.increaseCycles}} increase cycles (1 increasing row and {{details.perRow - 1}} regular row). In your increasing rows, you have
-        to knit one extra stitch every <span className="number">{{results.yokeIncrease.every2}}</span> stitches. You'll end with
-        <span className="number">{{results.armholeEnd}}</span> stitches.</p>
-        <p>Now, the separation: the body will have <span className="number">{{results.body}}</span> stitches. So:</p>
+        to knit one extra stitch every <span class="number-result">{{results.yokeIncrease.every2}}</span> stitches. You'll end with
+        <span class="number-result">{{results.armholeEnd}}</span> stitches.</p>
+        <p>Now, the separation: the body will have <span class="number-result">{{results.body}}</span> stitches. So:</p>
           <ol>
-            <li>pick up <span className="number">{{results.yokeSleeves}}</span> stitches in a pin for the sleeves;</li>
-            <li>cast on more <span className="number">{{results.differenceChestCarrure}}</span> stitches on the needle for the underarm part of the body;</li>
-            <li>knit <span className="number">{{Math.ceil(results.body / 2)}}</span> stitches for the front part;</li>
-            <li>put <span className="number">{{results.yokeSleeves}}</span> stitches in a pin for the other sleeve;</li>
-            <li>cast on more <span className="number">{{results.differenceChestCarrure}}</span> stitches on the needle for the underarm part of the body;</li>
-            <li>knit <span className="number">{{Math.floor(results.body / 2)}}</span> stitches for the the back part. Knit the body until the end. Go to the sleeves.
-                Pass to the needle the <span className="number">{{results.yokeSleeves}}</span> stitches from the pin. Don't forget to add the 
-                <span className="number">{{results.differenceChestCarrure}}</span> stitches for the underarm part of the sleeve.</li>
+            <li>pick up <span class="number-result">{{results.yokeSleeves}}</span> stitches in a pin for the sleeves;</li>
+            <li>cast on more <span class="number-result">{{results.differenceChestCarrure}}</span> stitches on the needle for the underarm part of the body;</li>
+            <li>knit <span class="number-result">{{Math.ceil(results.body / 2)}}</span> stitches for the front part;</li>
+            <li>put <span class="number-result">{{results.yokeSleeves}}</span> stitches in a pin for the other sleeve;</li>
+            <li>cast on more <span class="number-result">{{results.differenceChestCarrure}}</span> stitches on the needle for the underarm part of the body;</li>
+            <li>knit <span class="number-result">{{Math.floor(results.body / 2)}}</span> stitches for the the back part. Knit the body until the end. Go to the sleeves.
+                Pass to the needle the <span class="number-result">{{results.yokeSleeves}}</span> stitches from the pin. Don't forget to add the 
+                <span class="number-result">{{results.differenceChestCarrure}}</span> stitches for the underarm part of the sleeve.</li>
             <li>Make your sleeves with {{results.arm}} rows.</li>
           </ol>
         <p>Happy knitting!</p>
@@ -97,7 +97,6 @@
       if (localStorage.getItem("measures")){
         let measures = JSON.parse(localStorage.getItem("measures"));
         this.measures = measures;
-        console.log('measures', measures);
       }
 
     },
@@ -213,6 +212,9 @@
   .results{
     width: 90%;
     font-size: 1.2rem;
+  }
+  .number-result{
+    font-weight: 700;
   }
   #rows,
   #stitches{
