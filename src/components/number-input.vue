@@ -1,18 +1,13 @@
 <template>
     <div class="number-input">
         <div class="label">{{label}}</div>
-        <input class="input" type="number" :value="value" @input="onInput" maxlength="3"/>
+        <input class="input" type="number" :value="value" @input="onInput"/>
         <div class="unit">{{unit}}</div>
     </div>
 </template>
 
 <script>
     export default {
-        data(){
-            return {
-               
-            }
-        },
         props:{
             label: {
                 type: String,
