@@ -131,7 +131,7 @@ export default {
       let raglan = Math.round(difference / 8);
       let arm = Math.round((this.sample.rows * this.measures.arm) / 10);
       let wrist = Math.round((this.measures.wrist * this.sample.stitches) / 10);
-      
+
       return {
         neckline,
         armholeEnd: armholeEndStitches,
@@ -221,7 +221,6 @@ section {
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 2rem;
   background-color: var(--fluorgreen);
@@ -233,10 +232,8 @@ h2 {
 .form {
   position: relative;
   width: 100%;
-  position: relative;
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
